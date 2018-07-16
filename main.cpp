@@ -48,7 +48,7 @@ class Person : public RefBase {
 
     void printInfo(void) {
         // 把A B强制升级为强引用
-        // 因为弱引用只记录了对象的引用计数，不能访问类的成员属性和函数
+        // 因为弱引用只记录了对象的引用计数，不能访问类的成员属性和方法
         sp<Person> a = A.promote();
         sp<Person> b = B.promote();
 
