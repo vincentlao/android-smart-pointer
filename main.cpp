@@ -89,6 +89,7 @@ void test_func() {
 }
 
 int main(int argc, char **argv) {
+    // test_func方法调用完之后，A B对象会自动delete
     test_func();
     return 0;
 }
