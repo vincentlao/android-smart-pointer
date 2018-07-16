@@ -5,7 +5,7 @@
 using namespace std;
 using namespace android;
 
-// 安卓智能指针的使用
+// Android智能指针的使用
 class Person : public RefBase {
 
   private:
