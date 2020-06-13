@@ -57,7 +57,6 @@ class Person : public RefBase {
         }
     }
 
-
     private:
       string name;
       //定义A B两个人
