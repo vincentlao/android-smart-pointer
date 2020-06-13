@@ -8,13 +8,6 @@ using namespace android;
 // Android智能指针的使用
 class Person : public RefBase {
 
-  private:
-    string name;
-    //定义A B两个人
-    wp<Person> A;
-    wp<Person> B;
-    weakref_type *weak;
-
   public:
     Person(string name = "") {
         // 构造函数
@@ -44,7 +37,7 @@ class Person : public RefBase {
         cout << "B的弱引用计数：" << weak->getWeakCount() << endl;
     }
 
-    string getName(void) { return name; }
+    string& getName(void) { return name; }
 
     void printInfo(void) {
         // 把A B强制升级为强引用
@@ -63,6 +56,14 @@ class Person : public RefBase {
             cout << "B的强引用计数：" << b->getStrongCount() << endl;
         }
     }
+
+
+    private:
+      string name;
+      //定义A B两个人
+      wp<Person> A;
+      wp<Person> B;
+      weakref_type *weak;
 };
 
 void test_func() {
